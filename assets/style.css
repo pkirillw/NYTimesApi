@@ -1,0 +1,19 @@
+body {
+    background-color: #e0e0e0;
+}
+
+.padtop {
+    margin-top: 15px;
+}
+
+.bg-nyt {
+    background-color: #f1f1f1 !important;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.news-item {
+    padding: 5px;
+}
