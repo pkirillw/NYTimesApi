@@ -11,7 +11,7 @@ class ApiNytimes
     private $baseUri;
     private $apiKey;
 
-    public function __construct(string $baseUri, string $apiKey)
+    public function __construct($baseUri, $apiKey)
     {
         $this->baseUri = $baseUri;
         $this->apiKey = $apiKey;
@@ -24,7 +24,7 @@ class ApiNytimes
      * @return array
      * @throws ApiNytimesException
      */
-    public function call(string $url, array $data, string $type): array
+    public function call($url, $data, $type)
     {
 
         $data['api-key'] = $this->apiKey;
@@ -63,7 +63,7 @@ class ApiNytimes
     /**
      * @return mixed
      */
-    public function getBaseUri(): string
+    public function getBaseUri()
     {
         return $this->baseUri;
     }
@@ -71,7 +71,7 @@ class ApiNytimes
     /**
      * @param mixed $baseUri
      */
-    public function setBaseUri(string $baseUri): void
+    public function setBaseUri($baseUri)
     {
         $this->baseUri = $baseUri;
     }
@@ -79,7 +79,7 @@ class ApiNytimes
     /**
      * @return mixed
      */
-    public function getApiKey(): string
+    public function getApiKey()
     {
         return $this->apiKey;
     }
@@ -87,7 +87,7 @@ class ApiNytimes
     /**
      * @param mixed $apiKey
      */
-    public function setApiKey(string $apiKey): void
+    public function setApiKey($apiKey)
     {
         $this->apiKey = $apiKey;
     }

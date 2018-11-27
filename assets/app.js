@@ -1,4 +1,4 @@
-var url = "http://127.0.0.1/NYTimesApi/handler.php";
+var url = "http://dev.pkirillw.ru/NYTimesApi/handler.php";
 $('#search-submit').on('click', function () {
     var searchRequest = $('#search-text').val();
     if (searchRequest === '') {
