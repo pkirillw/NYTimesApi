@@ -1,18 +1,18 @@
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+var url = "http://127.0.0.1/NYTimesApi/handler.php";
 $('#search-submit').on('click', function () {
     var searchRequest = $('#search-text').val();
     if (searchRequest === '') {
         return true;
     }
     var params = '?' + $.param({
-        'api-key': 'f938d8e859ca47a48633c20050e112f6',
-        'q': searchRequest,
-        'sort': 'newest'
+        'q': searchRequest
     });
     $.ajax({
         url: url + params,
         method: 'GET',
+        dataType: "json"
     }).done(function (result) {
+        console.log(result);
         $('#news').html('');
         $.each(result.response.docs, function (index, value) {
             var imageUrl = 'https://via.placeholder.com/75';
